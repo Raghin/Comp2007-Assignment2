@@ -9,7 +9,10 @@
         a list of books that can be added to and information edited if some portions are missing. You
         will not be able to create records from this page.
     </div>
-    <a href="book.aspx">Add Book</a>
+    <div class="col-sm">
+        <asp:Button ID="bookRedirect" runat="server" Text="Add Book" CssClass="btn btn-primary"
+             OnClick="bookRedirect_Click" />
+    </div>
     <div>
         <label for="ddlPageSize">Books Per Page:</label>
         <asp:DropDownList ID="ddlPageSize" runat="server" AutoPostBack="true"
@@ -32,4 +35,8 @@
             <asp:CommandField DeleteText="Delete" HeaderText="Delete" ShowDeleteButton="true" />
         </Columns>
     </asp:GridView>
+    <div class="col-sm">
+        <asp:Button ID="Button1" runat="server" Text="Add Book" CssClass="btn btn-primary"
+             OnClick="bookRedirect_Click" />
+    </div>
 </asp:Content>

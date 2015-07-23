@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-//reference our entity framework models
+//reference entity framework models
 using Comp2007_Assignment2.Models;
 using System.Web.ModelBinding;
 using System.Linq.Dynamic;
@@ -84,6 +84,11 @@ namespace Comp2007_Assignment2
         protected void grdBooks_RowDataBound(object sender, GridViewRowEventArgs e)
         {
 
+        }
+
+        protected void bookRedirect_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("book.aspx");
         }
     }
 }

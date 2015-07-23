@@ -102,6 +102,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assignment2.Master" />
+    <Content Include="private\game.aspx" />
+    <Content Include="private\games.aspx" />
     <Content Include="private\book.aspx" />
     <Content Include="packages.config" />
     <EntityDeploy Include="Models\Hobby.edmx">
@@ -147,6 +149,20 @@
     </Compile>
     <Compile Include="Assignment2.Master.designer.cs">
       <DependentUpon>Assignment2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="private\game.aspx.cs">
+      <DependentUpon>game.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="private\game.aspx.designer.cs">
+      <DependentUpon>game.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="private\games.aspx.cs">
+      <DependentUpon>games.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="private\games.aspx.designer.cs">
+      <DependentUpon>games.aspx</DependentUpon>
     </Compile>
     <Compile Include="private\book.aspx.cs">
       <DependentUpon>book.aspx</DependentUpon>

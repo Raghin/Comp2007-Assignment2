@@ -10,42 +10,51 @@
 namespace Comp2007_Assignment2 {
     
     
-    public partial class temp {
+    public partial class game {
         
         /// <summary>
-        /// bookRedirect control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bookRedirect;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
-        /// ddlPageSize control.
+        /// txtGenre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPageSize;
+        protected global::System.Web.UI.WebControls.TextBox txtGenre;
         
         /// <summary>
-        /// grdBooks control.
+        /// txtAlt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdBooks;
+        protected global::System.Web.UI.WebControls.TextBox txtAlt;
         
         /// <summary>
-        /// Button1 control.
+        /// txtLength control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.TextBox txtLength;
+        
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

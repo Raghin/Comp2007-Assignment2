@@ -22,7 +22,9 @@
                 <li><a href="/login.aspx">Login</a></li>
             </asp:PlaceHolder>
             <asp:PlaceHolder ID="plhPrivate" runat="server">
+                <li><a href="/private/main.aspx">Search</a></li>
                 <li><a href="/private/books.aspx">Books</a></li>
+                <li><a href="/private/games.aspx">Games</a></li>
                 <li><a href="/logout.aspx">Log out</a></li>
             </asp:PlaceHolder>
         </ul>
