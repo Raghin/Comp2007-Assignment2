@@ -18,15 +18,15 @@
     </div>
     <div class="form-group">
         <label for="txtGenre" class="col-sm-3">Genre:</label>
-        <asp:TextBox ID="txtGenre" runat="server" required="true" MaxLength="50" />
+        <asp:TextBox ID="txtGenre" runat="server" MaxLength="50" />
     </div>
     <div class="form-group">
         <label for="txtAlt" class="col-sm-3">Alternate Name:</label>
-        <asp:TextBox ID="txtAlt" runat="server" required="true" MaxLength="50" />
+        <asp:TextBox ID="txtAlt" runat="server" MaxLength="50" />
     </div>
     <div class="form-group">
         <label for="txtLength" class="col-sm-3">Length:</label>
-        <asp:TextBox ID="txtLength" runat="server" required="true" MaxLength="50" />
+        <asp:TextBox ID="txtLength" runat="server" MaxLength="50" />
     </div>
     <div class="col-sm-offset-3">
         <asp:Button ID="btnSave" runat="server" Text="Save Book" CssClass="btn btn-primary"

@@ -4,6 +4,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <h1>Books</h1>
+    <div>
+        Here we have a list of all the books currently inside the database. Please note this is simply 
+        a list of books that can be added to and information edited if some portions are missing. You
+        will not be able to create records from this page.
+    </div>
     <a href="book.aspx">Add Book</a>
     <div>
         <label for="ddlPageSize">Books Per Page:</label>
@@ -15,7 +20,7 @@
         </asp:DropDownList>
     </div>
     <asp:GridView ID="grdBooks" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-hover sort display" 
-        DataKeyNames="BookID" AllowPaging="true" PageSize="3" AllowSorting="true" OnRowDeleting="grdBooks_RowDeleting"
+        DataKeyNames="BookID" AllowPaging="true" PageSize="5" AllowSorting="true" OnRowDeleting="grdBooks_RowDeleting"
         OnSorting="grdBooks_Sorting" OnPageIndexChanging="grdBooks_PageIndexChanging" OnRowDataBound="grdBooks_RowDataBound">
         <Columns>
             <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
