@@ -36,5 +36,54 @@ namespace Comp2007_Assignment2
                 grdBooks.DataBind();
             }
         }
+
+        protected void ddlPageSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            grdBooks.PageSize = Convert.ToInt32(ddlPageSize.SelectedValue);
+            GetBooks();
+        }
+
+        protected void grdBooks_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            using(DefaultConnectionEF conn = new DefaultConnectionEF())
+            {
+                Int32 BookID = Convert.ToInt32(grdBooks.DataKeys[e.RowIndex].Values["BookID"]);
+
+                var b = (from books in conn.Books1
+                         where books.BookID == BookID
+                         select books).FirstOrDefault();
+
+                conn.Books1.Remove(b);
+                conn.SaveChanges();
+
+                GetBooks();
+            }
+        }
+
+        protected void grdBooks_Sorting(object sender, GridViewSortEventArgs e)
+        {
+            Session["SortColumn"] = e.SortExpression;
+            GetBooks();
+
+            if (Session["SortDirection"].ToString() == "ASC")
+            {
+                Session["SortDirection"] = "DESC";
+            }
+            else
+            {
+                Session["SortDirection"] = "ASC";
+            }
+        }
+
+        protected void grdBooks_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdBooks.PageIndex = e.NewPageIndex;
+            GetBooks();
+        }
+
+        protected void grdBooks_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+
+        }
     }
 }

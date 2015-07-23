@@ -13,6 +13,15 @@ namespace Comp2007_Assignment2 {
     public partial class temp {
         
         /// <summary>
+        /// ddlPageSize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPageSize;
+        
+        /// <summary>
         /// grdBooks control.
         /// </summary>
         /// <remarks>

@@ -5,9 +5,18 @@
     
     <h1>Books</h1>
     <a href="book.aspx">Add Book</a>
-    
+    <div>
+        <label for="ddlPageSize">Books Per Page:</label>
+        <asp:DropDownList ID="ddlPageSize" runat="server" AutoPostBack="true"
+             OnSelectedIndexChanged="ddlPageSize_SelectedIndexChanged">
+            <asp:ListItem Value="5" Text="5" />
+            <asp:ListItem Value="10" Text="10" />
+            <asp:ListItem Value="20" Text="20" />
+        </asp:DropDownList>
+    </div>
     <asp:GridView ID="grdBooks" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-hover sort display" 
-        DataKeyNames="BookID" AllowPaging="true" PageSize="3" AllowSorting="true">
+        DataKeyNames="BookID" AllowPaging="true" PageSize="3" AllowSorting="true" OnRowDeleting="grdBooks_RowDeleting"
+        OnSorting="grdBooks_Sorting" OnPageIndexChanging="grdBooks_PageIndexChanging" OnRowDataBound="grdBooks_RowDataBound">
         <Columns>
             <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
             <asp:BoundField DataField="Genre" HeaderText="Genre" SortExpression="Genre" />

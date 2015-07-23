@@ -29,7 +29,7 @@
         <asp:TextBox ID="txtLength" runat="server" required="true" MaxLength="50" />
     </div>
     <div class="col-sm-offset-3">
-        <asp:Button ID="btnSave" runat="server" Text="Add Book" CssClass="btn btn-primary"
+        <asp:Button ID="btnSave" runat="server" Text="Save Book" CssClass="btn btn-primary"
              OnClick="btnSave_Click" />
     </div>
 </asp:Content>
