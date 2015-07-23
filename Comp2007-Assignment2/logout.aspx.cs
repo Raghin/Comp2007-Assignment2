@@ -11,7 +11,10 @@ namespace Comp2007_Assignment2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //logout
+            var AuthenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+            AuthenticationManager.SignOut();
+            Response.Redirect("login.aspx");
         }
     }
 }
