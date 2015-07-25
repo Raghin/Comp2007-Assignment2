@@ -10,16 +10,16 @@
 namespace Comp2007_Assignment2 {
     
     
-    public partial class games {
+    public partial class shows {
         
         /// <summary>
-        /// gameRedirect control.
+        /// showRedirect control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button gameRedirect;
+        protected global::System.Web.UI.WebControls.Button showRedirect;
         
         /// <summary>
         /// ddlPageSize control.
@@ -31,21 +31,21 @@ namespace Comp2007_Assignment2 {
         protected global::System.Web.UI.WebControls.DropDownList ddlPageSize;
         
         /// <summary>
-        /// grdGames control.
+        /// grdShows control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdGames;
+        protected global::System.Web.UI.WebControls.GridView grdShows;
         
         /// <summary>
-        /// gameRedirect2 control.
+        /// showRedirect2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button gameRedirect2;
+        protected global::System.Web.UI.WebControls.Button showRedirect2;
     }
 }

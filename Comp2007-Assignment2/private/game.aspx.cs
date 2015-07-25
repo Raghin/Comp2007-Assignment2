@@ -29,14 +29,14 @@ namespace Comp2007_Assignment2
             {
                 Int32 GameID = Convert.ToInt32(Request.QueryString["GameID"]);
 
-                var b = (from Game in conn.Games1
+                var g = (from Game in conn.Games1
                          where Game.GameID == GameID
                          select Game).FirstOrDefault();
 
-                txtName.Text = b.Name;
-                txtGenre.Text = b.Genre;
-                txtAlt.Text = b.AltName;
-                txtLength.Text = b.Length;
+                txtName.Text = g.Name;
+                txtGenre.Text = g.Genre;
+                txtAlt.Text = g.AltName;
+                txtLength.Text = g.Length;
             }
         }
 
@@ -44,25 +44,25 @@ namespace Comp2007_Assignment2
         {
             using (DefaultConnectionEF conn = new DefaultConnectionEF())
             {
-                Games b = new Games();
+                Games g = new Games();
 
                 if (Request.QueryString.Count > 0)
                 {
                     Int32 GameID = Convert.ToInt32(Request.QueryString["GameID"]);
 
-                    b = (from Game in conn.Games1
+                    g = (from Game in conn.Games1
                          where Game.GameID == GameID
                          select Game).FirstOrDefault();
                 }
 
-                b.Name = txtName.Text;
-                b.Genre = txtGenre.Text;
-                b.AltName = txtAlt.Text;
-                b.Length = txtLength.Text;
+                g.Name = txtName.Text;
+                g.Genre = txtGenre.Text;
+                g.AltName = txtAlt.Text;
+                g.Length = txtLength.Text;
 
                 if (Request.QueryString.Count == 0)
                 {
-                    conn.Games1.Add(b);
+                    conn.Games1.Add(g);
                 }
 
                 conn.SaveChanges();

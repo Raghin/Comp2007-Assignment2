@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <h1>Books</h1>
-    <div>
+    <div class="well">
         Here we have a list of all the books currently inside the database. Please note this is simply 
         a list of books that can be added to and information edited if some portions are missing. You
         will not be able to create records from this page.
@@ -36,7 +36,7 @@
         </Columns>
     </asp:GridView>
     <div class="col-sm">
-        <asp:Button ID="Button1" runat="server" Text="Add Book" CssClass="btn btn-primary"
+        <asp:Button ID="bookRedirect2" runat="server" Text="Add Book" CssClass="btn btn-primary"
              OnClick="bookRedirect_Click" />
     </div>
 </asp:Content>

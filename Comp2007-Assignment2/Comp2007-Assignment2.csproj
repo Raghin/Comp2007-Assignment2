@@ -101,7 +101,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.aspx" />
     <Content Include="Assignment2.Master" />
+    <Content Include="error.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="private\game.aspx" />
     <Content Include="private\games.aspx" />
     <Content Include="private\book.aspx" />
@@ -138,17 +141,36 @@
     <Content Include="private\main.aspx" />
     <Content Include="register.aspx" />
     <Content Include="private\books.aspx" />
+    <Content Include="private\show.aspx" />
+    <Content Include="private\shows.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Assignment2.Master.cs">
       <DependentUpon>Assignment2.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Assignment2.Master.designer.cs">
       <DependentUpon>Assignment2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="private\game.aspx.cs">
       <DependentUpon>game.aspx</DependentUpon>
@@ -236,6 +258,20 @@
     </Compile>
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="private\show.aspx.cs">
+      <DependentUpon>show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="private\show.aspx.designer.cs">
+      <DependentUpon>show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="private\shows.aspx.cs">
+      <DependentUpon>shows.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="private\shows.aspx.designer.cs">
+      <DependentUpon>shows.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="private\books.aspx.cs">

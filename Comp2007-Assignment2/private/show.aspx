@@ -1,16 +1,16 @@
-﻿<%@ Page Title="game" Language="C#" MasterPageFile="~/Assignment2.Master" AutoEventWireup="true" CodeBehind="game.aspx.cs" Inherits="Comp2007_Assignment2.game" %>
+﻿<%@ Page Title="show" Language="C#" MasterPageFile="~/Assignment2.Master" AutoEventWireup="true" CodeBehind="show.aspx.cs" Inherits="Comp2007_Assignment2.show" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Game Details</h1>
+    <h1>Show Details</h1>
 
     <div class="well">
-        Here you enter the information about the game you wish to add to the list.
-        Only the game name is required, however when possible please add a genre and
-        length of the game in hours (# - # hours). Example:
+        Here you enter the information about the show you wish to add to the list.
+        Only the show name is required, however when possible please add a genre and
+        length of the show in either episodes, or minutes for a movie (# episodes / # Minutes). Example:
     </div>
     <div class="well">
-        Length: 50-65 hours
+        Length: 12 Episodes / 150 Minutes
     </div>
     <div class="form-group">
         <label for="txtName" class="col-sm-3">Name:</label>
@@ -29,7 +29,7 @@
         <asp:TextBox ID="txtLength" runat="server" MaxLength="50" />
     </div>
     <div class="col-sm-offset-3">
-        <asp:Button ID="btnSave" runat="server" Text="Save Game" CssClass="btn btn-primary"
+        <asp:Button ID="btnSave" runat="server" Text="Save Show" CssClass="btn btn-primary"
              OnClick="btnSave_Click" />
     </div>
 </asp:Content>

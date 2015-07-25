@@ -15,7 +15,7 @@
 </head>
 <body>
     <nav class="nav navbar-default">
-        <a href="default.aspx" class="nav navbar-brand">Hobby Tracker</a>
+        <a href="/default.aspx" class="nav navbar-brand">Hobby Tracker</a>
         <ul class="nav navbar-nav">
             <asp:PlaceHolder ID="plhPublic" runat="server">
                 <li><a href="/register.aspx">Register</a></li>
@@ -25,6 +25,7 @@
                 <li><a href="/private/main.aspx">Search</a></li>
                 <li><a href="/private/books.aspx">Books</a></li>
                 <li><a href="/private/games.aspx">Games</a></li>
+                <li><a href="/private/shows.aspx">Shows</a></li>
                 <li><a href="/logout.aspx">Log out</a></li>
             </asp:PlaceHolder>
         </ul>

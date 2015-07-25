@@ -4,12 +4,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Book Details</h1>
 
-    <div>
+    <div class="well">
         Here you enter the information about the book you wish to add to the list.
         Only the book name is required, however when possible please add a genre and
         length of the book in pages (# pages). Example:
     </div>
-    <div>
+    <div class="well">
         Length: 350 pages
     </div>
     <div class="form-group">
