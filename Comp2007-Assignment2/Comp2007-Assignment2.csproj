@@ -105,6 +105,7 @@
     <Content Include="Assignment2.Master" />
     <Content Include="error.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="private\manage.aspx" />
     <Content Include="private\game.aspx" />
     <Content Include="private\games.aspx" />
     <Content Include="private\book.aspx" />
@@ -171,6 +172,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="private\manage.aspx.cs">
+      <DependentUpon>manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="private\manage.aspx.designer.cs">
+      <DependentUpon>manage.aspx</DependentUpon>
     </Compile>
     <Compile Include="private\game.aspx.cs">
       <DependentUpon>game.aspx</DependentUpon>

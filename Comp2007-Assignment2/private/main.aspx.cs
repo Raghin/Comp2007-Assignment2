@@ -84,13 +84,30 @@ namespace Comp2007_Assignment2
 
         protected void ddlView_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        protected void ddlPageSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            grdgames.PageSize = Convert.ToInt32(ddlPageSize.SelectedValue);
-            getItems();
+            if(ddlView.SelectedValue == "All")
+            {
+                viewBooks.Visible = true;
+                viewGames.Visible = true;
+                viewShows.Visible = true;
+            }
+            else if(ddlView.SelectedValue == "Games")
+            {
+                viewBooks.Visible = false;
+                viewGames.Visible = true;
+                viewShows.Visible = false;
+            }
+            else if(ddlView.SelectedValue == "Books")
+            {
+                viewBooks.Visible = true;
+                viewGames.Visible = false;
+                viewShows.Visible = false;
+            }
+            else if(ddlView.SelectedValue == "Shows")
+            {
+                viewBooks.Visible = false;
+                viewGames.Visible = false;
+                viewShows.Visible = true;
+            }
         }
 
         protected void grdgames_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -98,16 +115,20 @@ namespace Comp2007_Assignment2
             String currentCommand = e.CommandName;
             int currentRowIndex = Int32.Parse(e.CommandArgument.ToString());
             string ID = grdgames.DataKeys[currentRowIndex].Value.ToString();
-            txtName.Text = ID;
             using (DefaultConnectionEF conn = new DefaultConnectionEF())
             {
                 Int32 GameID = Convert.ToInt32(ID);
-
+                var userName = HttpContext.Current.User.Identity.Name;
                 Records objR = new Records();
+                AspNetUsers objU = (from u in conn.AspNetUsers1 where u.UserName == userName select u).FirstOrDefault();
                 Games objG = (from g in conn.Games1 where g.GameID == GameID select g).FirstOrDefault();
+                objR.UserID = objU.Id;
                 objR.GameID = objG.GameID;
                 objR.Status = false;
                 objR.Progress = "None";
+
+                conn.Records1.Add(objR);
+                conn.SaveChanges();
             }
         }
 
@@ -116,16 +137,20 @@ namespace Comp2007_Assignment2
             String currentCommand = e.CommandName;
             int currentRowIndex = Int32.Parse(e.CommandArgument.ToString());
             string ID = grdBooks.DataKeys[currentRowIndex].Value.ToString();
-            txtName.Text = ID;
             using (DefaultConnectionEF conn = new DefaultConnectionEF())
             {
                 Int32 BookID = Convert.ToInt32(ID);
-
+                var userName = HttpContext.Current.User.Identity.Name;
                 Records objR = new Records();
+                AspNetUsers objU = (from u in conn.AspNetUsers1 where u.UserName == userName select u).FirstOrDefault();
                 Books objB = (from b in conn.Books1 where b.BookID == BookID select b).FirstOrDefault();
+                objR.UserID = objU.Id;
                 objR.BookID = objB.BookID;
                 objR.Status = false;
                 objR.Progress = "None";
+
+                conn.Records1.Add(objR);
+                conn.SaveChanges();
             }
         }
 
@@ -134,12 +159,10 @@ namespace Comp2007_Assignment2
             String currentCommand = e.CommandName;
             int currentRowIndex = Int32.Parse(e.CommandArgument.ToString());
             string ID = grdShows.DataKeys[currentRowIndex].Value.ToString();
-            txtName.Text = ID;
             using (DefaultConnectionEF conn = new DefaultConnectionEF())
             {
                 Int32 ShowID = Convert.ToInt32(ID);
                 var userName = HttpContext.Current.User.Identity.Name;
-                txtName.Text = userName;
                 Records objR = new Records();
                 AspNetUsers objU = (from u in conn.AspNetUsers1 where u.UserName == userName select u).FirstOrDefault();
                 Shows objS = (from s in conn.Shows1 where s.ShowID == ShowID select s).FirstOrDefault();

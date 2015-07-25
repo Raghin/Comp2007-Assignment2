@@ -1,4 +1,4 @@
-﻿<%@ Page Title="main" Language="C#" MasterPageFile="~/Assignment2.Master" AutoEventWireup="true" CodeBehind="main.aspx.cs" Inherits="Comp2007_Assignment2.main" %>
+﻿<%@ Page Title="main" MaintainScrollPositionOnPostback="true" Language="C#" MasterPageFile="~/Assignment2.Master" AutoEventWireup="true" CodeBehind="main.aspx.cs" Inherits="Comp2007_Assignment2.main" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -15,14 +15,9 @@
             <asp:ListItem Text="Books" />
             <asp:ListItem Text="Shows" />
         </asp:DropDownList>
-        <asp:DropDownList ID="ddlPageSize" runat="server" AutoPostBack="true" 
-            OnSelectedIndexChanged="ddlPageSize_SelectedIndexChanged">
-            <asp:ListItem Value="5" Text="5" />
-            <asp:ListItem Value="10" Text="10" />
-            <asp:ListItem Value="20" Text="20" />
-        </asp:DropDownList>
 
     </div>
+    <div id="viewGames" runat="server">
     <h4>Games</h4>
     <asp:GridView ID="grdgames" runat="server" CssClass="table table-striped table-hover sort display"
         AutoGenerateColumns="false" DataKeyNames="GameID" AllowPaging="true" AllowSorting="true" 
@@ -34,9 +29,8 @@
             <asp:BoundField DataField="Length" HeaderText="Length" sortexpression="Length" />
             <asp:ButtonField Text ="Add" HeaderText="Add to Collection" ButtonType="Button" CommandName="getID" />
         </Columns>
-    </asp:GridView>
-    <label for="txtName" class="col-sm-3">Name:</label>
-        <asp:TextBox ID="txtName" runat="server" required="true" MaxLength="50" />
+    </asp:GridView></div>
+    <div id="viewBooks" runat="server">
     <h4>Books</h4>
     <asp:GridView ID="grdBooks" runat="server" CssClass="table table-striped table-hover sort display"
         AutoGenerateColumns="false" DataKeyNames="BookID" AllowPaging="true" AllowSorting="true" 
@@ -48,7 +42,8 @@
             <asp:BoundField DataField="Length" HeaderText="Length" sortexpression="Length" />
             <asp:ButtonField Text ="Add" HeaderText="Add to Collection" ButtonType="Button" CommandName="getID" />
         </Columns>
-    </asp:GridView>
+    </asp:GridView></div>
+    <div id="viewShows" runat="server">
     <h4>Shows</h4>
     <asp:GridView ID="grdShows" runat="server" CssClass="table table-striped table-hover sort display"
         AutoGenerateColumns="false" DataKeyNames="ShowID" AllowPaging="true" AllowSorting="true" 
@@ -60,5 +55,5 @@
             <asp:BoundField DataField="Length" HeaderText="Length" sortexpression="Length" />
             <asp:ButtonField Text ="Add" HeaderText="Add to Collection" ButtonType="Button" CommandName="getID" />
         </Columns>
-    </asp:GridView>
+    </asp:GridView></div>
 </asp:Content>

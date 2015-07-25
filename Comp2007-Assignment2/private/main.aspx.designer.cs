@@ -22,13 +22,13 @@ namespace Comp2007_Assignment2 {
         protected global::System.Web.UI.WebControls.DropDownList ddlView;
         
         /// <summary>
-        /// ddlPageSize control.
+        /// viewGames control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPageSize;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl viewGames;
         
         /// <summary>
         /// grdgames control.
@@ -40,13 +40,13 @@ namespace Comp2007_Assignment2 {
         protected global::System.Web.UI.WebControls.GridView grdgames;
         
         /// <summary>
-        /// txtName control.
+        /// viewBooks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl viewBooks;
         
         /// <summary>
         /// grdBooks control.
@@ -56,6 +56,15 @@ namespace Comp2007_Assignment2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdBooks;
+        
+        /// <summary>
+        /// viewShows control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl viewShows;
         
         /// <summary>
         /// grdShows control.

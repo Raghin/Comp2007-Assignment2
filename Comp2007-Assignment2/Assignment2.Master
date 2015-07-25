@@ -23,6 +23,7 @@
             </asp:PlaceHolder>
             <asp:PlaceHolder ID="plhPrivate" runat="server">
                 <li><a href="/private/main.aspx">Search</a></li>
+                <li><a href="/private/manage.aspx">Collection</a></li>
                 <li><a href="/private/books.aspx">Books</a></li>
                 <li><a href="/private/games.aspx">Games</a></li>
                 <li><a href="/private/shows.aspx">Shows</a></li>
@@ -58,5 +59,21 @@
         });
 
    </script>
+
+    <script type="text/javascript">
+        var xPos, yPos;
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler);
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(EndRequestHandler);
+
+        function BeginRequestHandler(sender, args) {
+            xPos = document.body.scrollLeft;
+            yPos = document.body.scrollTop;
+        }
+
+        function EndRequestHandler(sender, args) {
+            document.body.scrollLeft = xPos;
+            document.body.scrollTop = yPos;
+        }
+    </script>
 </body>
 </html>
