@@ -140,6 +140,7 @@
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
     <Content Include="private\main.aspx" />
+    <Content Include="private\progress.aspx" />
     <Content Include="register.aspx" />
     <Content Include="private\books.aspx" />
     <Content Include="private\show.aspx" />
@@ -258,6 +259,13 @@
     </Compile>
     <Compile Include="Models\Shows.cs">
       <DependentUpon>Hobby.tt</DependentUpon>
+    </Compile>
+    <Compile Include="private\progress.aspx.cs">
+      <DependentUpon>progress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="private\progress.aspx.designer.cs">
+      <DependentUpon>progress.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.aspx.cs">

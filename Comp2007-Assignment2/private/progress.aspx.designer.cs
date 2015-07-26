@@ -10,24 +10,24 @@
 namespace Comp2007_Assignment2 {
     
     
-    public partial class manage {
+    public partial class progress {
         
         /// <summary>
-        /// ddlPageSize control.
+        /// txtProgress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPageSize;
+        protected global::System.Web.UI.WebControls.TextBox txtProgress;
         
         /// <summary>
-        /// grdRecords control.
+        /// btnSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdRecords;
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

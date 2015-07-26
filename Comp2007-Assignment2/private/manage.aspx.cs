@@ -92,19 +92,5 @@ namespace Comp2007_Assignment2
             grdRecords.PageIndex = e.NewPageIndex;
             getRecords();
         }
-
-        protected void grdRecords_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            int currentRowIndex = Int32.Parse(e.CommandArgument.ToString());
-            int ID = Convert.ToInt32(grdRecords.DataKeys[currentRowIndex].Value);
-            using (DefaultConnectionEF conn = new DefaultConnectionEF())
-            {
-                Records record = (from r in conn.Records1 where r.RecordID == ID select r).FirstOrDefault();
-                record.Progress = txtUpdate.Text;
-                conn.SaveChanges();
-            }
-
-            Response.Redirect("manage.aspx");
-        }
     }
 }
