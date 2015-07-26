@@ -112,7 +112,6 @@ namespace Comp2007_Assignment2
 
         protected void grdgames_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            String currentCommand = e.CommandName;
             int currentRowIndex = Int32.Parse(e.CommandArgument.ToString());
             string ID = grdgames.DataKeys[currentRowIndex].Value.ToString();
             using (DefaultConnectionEF conn = new DefaultConnectionEF())
@@ -134,7 +133,6 @@ namespace Comp2007_Assignment2
 
         protected void grdBooks_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            String currentCommand = e.CommandName;
             int currentRowIndex = Int32.Parse(e.CommandArgument.ToString());
             string ID = grdBooks.DataKeys[currentRowIndex].Value.ToString();
             using (DefaultConnectionEF conn = new DefaultConnectionEF())
@@ -156,7 +154,6 @@ namespace Comp2007_Assignment2
 
         protected void grdShows_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            String currentCommand = e.CommandName;
             int currentRowIndex = Int32.Parse(e.CommandArgument.ToString());
             string ID = grdShows.DataKeys[currentRowIndex].Value.ToString();
             using (DefaultConnectionEF conn = new DefaultConnectionEF())
